@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap 5</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://kit.fontawesome.com/5b5e290224.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col bg-image blocks"></div>
+			<div class="col-auto">
+				<div class="login-panel">
+					<img class="mb-3" src="images/aci_logo.svg" alt="logo" />
+					<h3 class="mb-5">Create your account</h1>
+						<form>
+							<fieldset>
+								<div class="mb-3">
+									<label for="inputEmailDisabled" class="form-label">Email</label>
+									<input disabled="" type="email" class="form-control" placeholder=""
+										id="inputEmailDisabled" value="johndoe@example.com">
+								</div>
+								<div class="mb-3">
+									<label for="inputEmail" class="form-label required">Full name</label>
+									<input type="email" class="form-control" placeholder="" id="inputEmail" required>
+								</div>
+								<div class="mb-3">
+									<label for="inputTitle" class="form-label">Title</label>
+									<input type="email" class="form-control" placeholder="" id="inputTitle">
+								</div>
+								<div class="mb-3">
+									<label for="inputPassword" class="form-label required">Create password</label>
+									<div class="input-group mb-3">
+										<span class="input-group-text left"><i class="fa fa-lock"></i></span>
+										<input type="password" class="form-control icon" placeholder=""
+											id="inputPassword">
+										<span>
+											<i class="fa fa-eye right" id="togglePassword"></i>
+										</span>
+									</div>
+
+								</div>
+
+								<button type="submit" class="mt-5 btn btn-primary w-100">Create
+									account</button>
+							</fieldset>
+						</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+@import "bootstrap.min.css";
+
+/* OVERRIDE BOOTSTRAP STYLES */
+
+.btn-primary {
+	background-color: #111;
+	border: #000;
+}
+
+.btn-primary:hover {
+	background-color: #555;
+}
+
+.form-label {
+	font-size: 0.8rem;
+	font-weight: bold;
+	margin-bottom: 0.3rem;
+}
+
+.required:before {
+	color: red;
+	content: "*";
+	position: absolute;
+	margin-left: -10px;
+}
+
+.input-group i.right {
+	color: #aaa;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 999;
+}
+
+.input-group-text.left {
+	background-color: transparent;
+}
+.input-group-text.right {
+	background-color: transparent;
+}
+.input-link {
+	text-decoration: none;
+	font-size: 0.8rem;
+}
+
+/* CUSTOM STYLES */
+
+.bg-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.bg-image.test_pic {
+	background-image: url("https://mdbootstrap.com/img/Photos/Others/images/76.jpg");
+}
+
+.bg-image.blocks {
+	background-image: url("../images/blocks.jpg");
+}
+
+.login-panel {
+	width: 280px;
+	margin: 100px 60px 30px 60px;
+}
