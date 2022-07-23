@@ -60,6 +60,19 @@
 }
 
 .login-panel {
-	width: 280px;
+	width: 320px;
 	margin: 100px 60px 30px 60px;
+}
+
+.otp input {
+	width: 40px;
+	height: 60px;
+}
+
+.otp input[type="number"]::-webkit-inner-spin-button,
+.otp input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
 }
