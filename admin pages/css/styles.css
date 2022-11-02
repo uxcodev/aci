@@ -906,6 +906,9 @@ tbody::-webkit-scrollbar {
   border-radius: 6px; }
   .empty_block .template_name {
     opacity: 0.5; }
+  .empty_block_min {
+    min-height: 46px;
+    padding: 10px 20px; }
 
 .arrow-icon {
   width: 11px; }

@@ -155,9 +155,9 @@
                           </ol>
                         </nav>
                         <div class="title_block justify-content-between">
-                          <h1 class="h1 color_black mb-0 me-3" data-bs-toggle="modal" data-bs-target="#save_template_b">Title</h1>
+                          <h1 class="h1 color_black mb-0 me-3">Title</h1>
                           <div class="right_elements">
-                            <button type="button" class="btn btn-black btn_st" data-bs-toggle="modal" data-bs-target="#save_template_a">
+                            <button type="button" class="btn btn-black btn_st d-inline-flex" data-bs-toggle="modal" data-bs-target="#save_template_a">
                               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="st1" d="M7 7C5.875 7 5 7.90625 5 9C5 10.125 5.875 11 7 11C8.09375 11 9 10.125 9 9C9 7.90625 8.09375 7 7 7ZM13.5312 3.0625L10.9062 0.4375C10.6562 0.1875 10.25 0 9.875 0H2C0.875 0 0 0.90625 0 2V12C0 13.125 0.875 14 2 14H12C13.0938 14 14 13.125 14 12V4.125C14 3.75 13.8125 3.34375 13.5312 3.0625ZM4 1.5H8.5V4H4V1.5ZM12.5 12C12.5 12.2812 12.25 12.5 12 12.5H2C1.71875 12.5 1.5 12.2812 1.5 12V2C1.5 1.75 1.71875 1.5 2 1.5H2.5V4.75C2.5 5.1875 2.8125 5.5 3.25 5.5H9.25C9.65625 5.5 10 5.1875 10 4.75V1.625L12.4375 4.09375C12.4688 4.125 12.5 4.15625 12.5 4.21875V12Z"/>
                               </svg>
@@ -238,6 +238,7 @@
                                 <li><a class="dropdown-item dropdown-item-border" href="#">Delete project</a></li>
                               </ul>
                             </div>
+                            <div class="empty_block empty_block_min mb-4"></div>
                             <div class="add-block">
                               <div class="collapse" id="collapseExample">
                                 <div class="card card-dop card-body">
@@ -297,7 +298,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="empty_block mb-4">
+                        <!-- <div class="empty_block mb-4">
                           <div class="template_name">
                             <div class="drag-handle me-2">
                               <img src="./images/svg/drag-handle.svg" alt="">
@@ -305,7 +306,7 @@
                             <span class="color_tmpl color_tmpl_black"></span>
                             Template 1
                           </div>
-                        </div>
+                        </div> -->
                         <div class="empty_block mb-4"></div>
                         <div class="box_block">
                           <div class="inner_box_block">
@@ -510,42 +511,9 @@
                     <div class="checkbox_content">Step 1</div>
                   </div>
                 </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-transparent btn-md btn-padding-30" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-black btn-md btn-padding-30">Save template</button>
-          </div>
-        </div>
-      </div>
-    </div><!-- /Modal1 -->
+              </div><!-- /wrapper_checkbox_block -->
 
-    <!-- Modal2 -->
-    <div class="modal modal-dop fade" id="save_template_b" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <form class="form">
-              <div class="mb-4">
-                <input class="form-control" type="text" placeholder="" value="Untitled template" required>
-              </div>
-              <div class="subtitle_modal">Would you like to save a phase or step template?</div>
-              <div class="form-check ps-0 pt-3">
-                <input class="form-check-input item-radio" type="radio" name="flexRadioDefault11" id="flexRadioDefault111" checked>
-                <!-- and for class checked -->
-                <label class="form-check-label" for="flexRadioDefault111">
-                  <div class="text_modal">Phase template</div>
-                  <div class="text_min_modal">Select the phases you want to include, and which steps in each phase.</div>
-                </label>
-              </div>
-              <div class="form-check ps-0 pt-3">
-                <input class="form-check-input item-radio" type="radio" name="flexRadioDefault11" id="flexRadioDefault112">
-                <label class="form-check-label" for="flexRadioDefault112">
-                  <div class="text_modal">Steps template</div>
-                  <div class="text_min_modal">Select individual steps from a single phase</div>
-                </label>
-              </div>
+
               <div class="wrapper_checkbox_block">
                 <div class="checkbox_group">
                   <div class="item_checkbox_block item_checkbox_block_big">
@@ -607,7 +575,8 @@
                     <div class="checkbox_content">Step 1</div>
                   </div>
                 </div>
-              </div>
+              </div><!-- /wrapper_checkbox_block -->
+
             </form>
           </div>
           <div class="modal-footer">
@@ -616,7 +585,7 @@
           </div>
         </div>
       </div>
-    </div><!-- /Modal2 -->
+    </div><!-- /Modal1 -->
 
     <!-- Optional JavaScript -->
     <script src="./dependencies/jquery/jquery.min.js"></script>

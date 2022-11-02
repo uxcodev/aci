@@ -369,6 +369,10 @@
   .template_name {
     opacity: 0.5;
   }
+  &_min {
+    min-height: 46px;
+    padding: 10px 20px;
+  }
 }
 .arrow-icon {
   width: 11px;
