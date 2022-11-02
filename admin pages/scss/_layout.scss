@@ -1,0 +1,106 @@
+body, html {
+  font-family: 'Arial Nova', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  height: 100%;
+  color: #212121;
+}
+body {
+  background-color: #F5F5F5;
+}
+.h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.2;
+}
+.title_page {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+  margin-bottom: 30px;
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+}
+a {
+  color: #2196F3;
+  outline: none;
+  transition: all 0.3s;
+  &:hover,
+  &:focus {
+    color: #2196F3;
+    text-decoration: none;
+  }
+}
+p {
+  margin: 0px;
+}
+.text_big {
+  font-size: 24px;
+  line-height: 1.2;
+}
+.text_lg {
+  font-size: 18px;
+  line-height: 1.2;
+}
+.text {
+  font-size: 16px;
+  line-height: 1.2;
+  @media (max-width: 479.98px) {
+    font-size: 15px;
+  }
+}
+ul, ol {
+  padding: 0;
+  webkit-padding: 0;
+  moz-padding: 0;
+  list-style: none;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px; 
+}
+tbody::-webkit-scrollbar {
+  width: 2px;
+  height: 2px; 
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #263238;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #263238;
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.row-min {
+  margin-left: -5px;
+  margin-right: -5px;
+  .col-min {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.text-decoration-none {text-decoration: none !important;}
+.color_white { color: #ffffff !important;}
+.color_black { color: #000000 !important;}
+.color_blue {color: #2196F3 !important;}
+.color_gray { color: #EEEEEE !important;}
+.color_gray_light { color: #616161 !important;}
+.fw-bold { font-weight: bold !important;}
+.fw-light { font-weight: 300 !important;}
+.fw-normal { font-weight: normal !important;}
+.mb-20 {margin-bottom: 20px !important;}
+.mb-30 {margin-bottom: 30px !important;}

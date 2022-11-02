@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Arial Nova';
+    src: url('../font/ArialNova-Bold.eot');
+    src: local('../font/Arial Nova Bold'), local('../font/ArialNova-Bold'),
+        url('../font/ArialNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/ArialNova-Bold.woff2') format('woff2'),
+        url('../font/ArialNova-Bold.woff') format('woff'),
+        url('../font/ArialNova-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arial Nova';
+    src: url('../font/ArialNova-Light.eot');
+    src: local('../font/Arial Nova Light'), local('../font/ArialNova-Light'),
+        url('../font/ArialNova-Light.eot?#iefix') format('embedded-opentype'),
+        url('../font/ArialNova-Light.woff2') format('woff2'),
+        url('../font/ArialNova-Light.woff') format('woff'),
+        url('../font/ArialNova-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arial Nova';
+    src: url('../font/ArialNova.eot');
+    src: local('../font/Arial Nova'), local('../font/ArialNova'),
+        url('../font/ArialNova.eot?#iefix') format('embedded-opentype'),
+        url('../font/ArialNova.woff2') format('woff2'),
+        url('../font/ArialNova.woff') format('woff'),
+        url('../font/ArialNova.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
