@@ -1,0 +1,49 @@
+
+.modal {
+  &-dop {
+    .modal-dialog {
+      @media (min-width: 576px) {
+        max-width: 600px;
+      }
+      .modal-content {
+        background: #F4F5F8;
+        border-radius: 20px;
+        .modal-body {
+          padding: 50px;
+          @media (max-width: 1100px) {
+            padding: 30px;
+          }
+          @media (max-width: 575px) {
+            padding: 20px;
+          }
+        }
+        .modal-footer {
+          border: none;
+          padding: 0px 50px 50px 50px;
+          @media (max-width: 1100px) {
+            padding: 0px 30px 30px 30px;
+          }
+          @media (max-width: 575px) {
+            padding: 0px 20px 20px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+.subtitle_modal {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  color: #333333;
+}
+.text_modal {
+  font-size: 13px;
+  line-height: 1.2;
+  color: #000000;
+}
+.text_min_modal {
+  font-size: 12px;
+  line-height: 1.2;
+  color: #7F7D7E;
+}
