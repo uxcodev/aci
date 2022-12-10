@@ -881,21 +881,6 @@
     display: none;
   }
 }
-.wrapper_icon_collapse {
-  position: absolute;
-  bottom: 5px;
-  right: 20px;
-  z-index: 2;
-  &[aria-expanded="true"] {
-    .icon_hide {
-      background-image: url('../images/svg/icon_hide_phases.svg');
-      display: inline-block;
-    }
-    .icon_show {
-      display: none;
-    }
-  }
-}
 .wrapper-right-phase,
 .wrapper_courses_status {
   display: flex;

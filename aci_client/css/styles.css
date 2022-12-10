@@ -1395,17 +1395,6 @@ tbody::-webkit-scrollbar {
   .icon_hide.hide {
     display: none; }
 
-.wrapper_icon_collapse {
-  position: absolute;
-  bottom: 5px;
-  right: 20px;
-  z-index: 2; }
-  .wrapper_icon_collapse[aria-expanded="true"] .icon_hide {
-    background-image: url("../images/svg/icon_hide_phases.svg");
-    display: inline-block; }
-  .wrapper_icon_collapse[aria-expanded="true"] .icon_show {
-    display: none; }
-
 .wrapper-right-phase,
 .wrapper_courses_status {
   display: flex;

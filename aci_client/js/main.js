@@ -127,11 +127,6 @@
 
     $('[data-bs-toggle="tooltip"]').tooltip();
 
-
-    $('.wrapper_icon_collapse').click(function(){
-      $('.all_courses').toggleClass('clicked');
-    });
-
     let mySwiper;
 
     $('.icon_show').on('click', function(event){
@@ -147,7 +142,7 @@
       $(this).addClass('hide');
       $('.icon_show').removeClass('hide');
       $('.wrapper-swiper').removeClass('active');
-      window.mySwiper = window.mySwiper.init($('.swiper'));
+      window.mySwiper.init($('.swiper'));
       window.mySwiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
         spaceBetween: 28,
