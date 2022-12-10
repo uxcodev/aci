@@ -132,6 +132,55 @@
       $('.all_courses').toggleClass('clicked');
     });
 
+    let mySwiper;
+
+    $('.icon_show').on('click', function(event){
+      event.preventDefault();
+      window.mySwiper.destroy(false, true);
+      $(this).addClass('hide');
+      $('.icon_hide').removeClass('hide');
+      $('.wrapper-swiper').addClass('active');
+    });
+
+    $('.icon_hide').on('click', function(event){
+      event.preventDefault();
+      $(this).addClass('hide');
+      $('.icon_show').removeClass('hide');
+      $('.wrapper-swiper').removeClass('active');
+      window.mySwiper = window.mySwiper.init($('.swiper'));
+      window.mySwiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 28,
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          992: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    });
+
+    window.mySwiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 28,
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+      },
+    });
+
   });
 
 

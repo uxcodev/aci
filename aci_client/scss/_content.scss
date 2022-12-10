@@ -322,7 +322,7 @@
   }
 }
 .card_instructions {
-  background: #FFFCF3;
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 4px;
   border-color: transparent;
   padding: 30px;
@@ -566,6 +566,7 @@
   fill: $bg-color-blue-500;
 }
 .item_cours {
+  width: 100%;
   border: 1px solid transparent;
   border-radius: 10px;
   display: flex;
@@ -652,15 +653,24 @@
     }
   }
   &_not_started {
+    &.selected {
+      border-color: $color-gray-400;
+      &:before {
+        border-top: 8px solid $color-gray-400;
+        display: inline-block;
+      }
+    }
     .cours_icon {
       background-image: url('../images/svg/not-started-icon.svg');
     }
   }
   &_blue {
-    border-color: $bg-color-blue-400;
-    &:before {
-      border-top: 8px solid $bg-color-blue-400;
-      display: inline-block;
+    &.selected {
+      border-color: $bg-color-blue-400;
+      &:before {
+        border-top: 8px solid $bg-color-blue-400;
+        display: inline-block;
+      }
     }
     .item_cours_left {
       background-color: $bg-color-blue-100;
@@ -683,10 +693,13 @@
       }
     }
   }
-  &_done {
-    border-color: transparent;
-    &:before {
-      display: none;
+  &_green {
+    &.selected {
+      border-color: $color-teal-500;
+      &:before {
+        border-top: 8px solid $color-teal-500;
+        display: inline-block;
+      }
     }
     .item_cours_left {
       background-color: $color-teal-50;
@@ -710,10 +723,12 @@
     }
   }
   &_yellow {
-    border-color: $bg-color-yellow-400;
-    &:before {
-      border-top: 8px solid $bg-color-yellow-400;
-      display: inline-block;
+    &.selected {
+      border-color: $bg-color-yellow-400;
+      &:before {
+        border-top: 8px solid $bg-color-yellow-400;
+        display: inline-block;
+      }
     }
     .item_cours_left {
       background-color: $bg-color-yellow-100;
@@ -740,85 +755,99 @@
     }
   }
 }
-.row-big {
+.wrapper-swiper {
   .item_cours {
     &:after {
       display: block;
     }
   }
-  .col-big:nth-child(2n) {
-    .item_cours {
-      &:after {
-        display: block;
-        @media (max-width: 767.98px) {
-          display: none !important;
-        }
-      }
-    }
-  }
-  .col-big:nth-child(1) {
-    .item_cours {
-      &:after {
-        display: block;
-      }
-    }
-  }
-  .col-big:nth-child(3n) {
-    .item_cours {
-      &:after {
-        display: block;
-        @media (max-width: 991.98px) {
-          display: none;
-        }
-        @media (max-width: 767.98px) {
-          display: block;
-        }
-      }
-    }
-  }
-  .col-big:nth-child(4n) {
-    .item_cours {
-      &:after {
-        display: none;
-        @media (max-width: 991.98px) {
-          display: block;
-        }
-      }
-    }
-  }
-  .col-big:last-child {
+  .swiper-slide:last-child {
     .item_cours {
       &:after {
         display: none !important;
       }
     }
   }
-}
-.row-big {
-  margin-left: -14px;
-  margin-right: -14px;
-  .col-big {
-    padding-left: 14px;
-    padding-right: 14px;
+  &.active {
+    .swiper-slide:nth-child(2n) {
+      .item_cours {
+        &:after {
+          display: block;
+          @media (max-width: 767.98px) {
+            display: none !important;
+          }
+        }
+      }
+    }
+    .swiper-slide:nth-child(1) {
+      .item_cours {
+        &:after {
+          display: block;
+        }
+      }
+    }
+    .swiper-slide:nth-child(3n) {
+      .item_cours {
+        &:after {
+          display: block;
+          @media (max-width: 991.98px) {
+            display: none;
+          }
+          @media (max-width: 767.98px) {
+            display: block;
+          }
+        }
+      }
+    }
+    .swiper-slide:nth-child(4n) {
+      .item_cours {
+        &:after {
+          display: none;
+          @media (max-width: 991.98px) {
+            display: block;
+          }
+        }
+      }
+    }
   }
 }
 .all_courses {
+  position: relative;
+}
+.wrapper-swiper {
   position: relative;
   margin-bottom: 20px;
   &:after {
     content: '';
     display: inline-block;
     background: linear-gradient(90deg, rgba(245, 245, 245, 0) 16.89%, #F5F5F5 84.46%);
-    // transform: matrix(-1, 0, 0, 1, 0, 0);
     height: 77px;
     width: 45px;
     position: absolute;
     right: 0px;
     top: 0px;
+    z-index: 2;
   }
-  &.clicked {
+  &.active {
+    margin-left: -14px;
+    margin-right: -14px;
     &:after {
       display: none;
+    }
+    .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      .swiper-slide {
+        padding-left: 14px;
+        padding-right: 14px;
+        width: 25%;
+        @media (max-width: 991.98px) {
+          width: 33.3333%;
+        }
+        @media (max-width: 767.98px) {
+          width: 50%;
+        }
+      }
     }
   }
 }
@@ -829,23 +858,34 @@
     }
   }
 }
+.icon_show_hide {
+  width: 30px;
+  height: 30px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+}
+.icon_show {
+  background-image: url('../images/svg/icon_show_phases.svg');
+  z-index: 4;
+  &.hide {
+    display: none;
+  }
+}
+.icon_hide {
+  background-image: url('../images/svg/icon_hide_phases.svg');
+  z-index: 3;
+  &.hide {
+    display: none;
+  }
+}
 .wrapper_icon_collapse {
   position: absolute;
   bottom: 5px;
   right: 20px;
   z-index: 2;
-  .icon_show_hide {
-    width: 30px;
-    height: 30px;
-    background-size: 30px;
-    background-repeat: no-repeat;
-  }
-  .icon_show {
-    background-image: url('../images/svg/icon_show_phases.svg');
-  }
-  .icon_hide {
-    display: none;
-  }
   &[aria-expanded="true"] {
     .icon_hide {
       background-image: url('../images/svg/icon_hide_phases.svg');
@@ -913,6 +953,9 @@
           }
           &-blue {
             background-color: $bg-color-blue-50;
+          }
+          &-light-blue {
+            background-color: #FAFAFA;
           }
         }
       }
