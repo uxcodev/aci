@@ -1,0 +1,22 @@
+.main-wrapper {
+  &.on {
+    .app {
+      .sidebar {
+        transition: all 0.4s !important;
+        transform: translateX(0%);
+      }
+    }
+  }
+  &.sidebar-open {
+    @media (max-width: 1100px) {
+      overflow-y: hidden;
+    }
+    .sidebar-overlay {
+      @media (max-width: 1100px) {
+        left: 0;
+        opacity: 1;
+        display: block;
+      }
+    }
+  }
+}
